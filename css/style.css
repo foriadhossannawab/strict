@@ -1,0 +1,360 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-color: #f6f9f9;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: #2d3950;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: #2d3950;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hg {
+    min-height: 90vh;
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 100px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.banner span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #15a4fa;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    color: #ffffff;
+    /* margin-bottom: 30px; */
+}
+
+.btn-call {
+    color: #ffffff;
+    border: 1px solid #15a4fa;
+    text-transform: capitalize;
+    padding: 0;
+    padding: 7px 15px;
+}
+
+.btn-call:hover,
+.submit:hover {
+    color: #f6f9f;
+    background-color: #15a4fa;
+    transition: 1.5s all ease-in-out;
+}
+
+.banner_icon {
+    color: #ffffff;
+    position: absolute;
+    left: 49%;
+    bottom: 10%;
+    /* transform: translateX(-50%); */
+    font-size: 25px;
+    animation: updown 1s infinite linear;
+    animation-direction: alternate;
+}
+
+@keyframes updown {
+    0% {
+        bottom: 15%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+
+.simple {
+    background-color: #f6f9f9;
+    padding: 55px 0;
+}
+
+.simple h2 {
+    color: #2d3950;
+}
+
+.simple p {
+    color: #999999;
+}
+
+.icon {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.f_icon {
+    height: 95px;
+    width: 95px;
+    background-color: #15a4fa;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+0,48baff+50,5fc3ff+50,5fc3ff+100 */
+    background: rgb(72, 186, 255);
+    /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(72, 186, 255, 1) 0%, rgba(72, 186, 255, 1) 50%, rgba(95, 195, 255, 1) 50%, rgba(95, 195, 255, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(72, 186, 255, 1) 0%, rgba(72, 186, 255, 1) 50%, rgba(95, 195, 255, 1) 50%, rgba(95, 195, 255, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(72, 186, 255, 1) 0%, rgba(72, 186, 255, 1) 50%, rgba(95, 195, 255, 1) 50%, rgba(95, 195, 255, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff', GradientType=1);
+    /* IE6-9 */
+}
+
+.icon h2 {
+    color: #2d3950;
+    font-size: 22px;
+}
+
+.icon p {
+    color: #999999;
+}
+
+.showcase {
+    background-color: #f6f9f9;
+    padding: 70px 0;
+}
+
+.item {
+    position: relative;
+}
+
+.item_icon a {
+    color: #ffffff;
+    list-style: none;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 1;
+    transition: 1s all ease-in-out; */
+}
+
+.search {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 0;
+    transition: 1.5s all ease-in-out;
+}
+
+.link {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 0;
+    transition: 1.5s all ease-in-out;
+}
+
+.search,
+.link {
+    color: #ffffff;
+    margin: 5px;
+    border: 1px solid #ffffff;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #15a4fa;
+    opacity: .5;
+    left: 0;
+    top: 0;
+    transition: 1s all ease-in-out;
+}
+
+.item:hover::before {
+    width: 50%;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #15a4fa;
+    opacity: .5;
+    right: 0;
+    top: 0;
+    transition: 1s all ease-in-out;
+}
+
+.item:hover::after {
+    width: 50%;
+}
+
+.item:hover .search {
+    opacity: 1;
+    left: 45%;
+    top: 50%;
+}
+
+.item:hover .link {
+    opacity: 1;
+    left: 55%;
+    top: 50%;
+}
+
+.stay {
+    min-height: 75vh;
+    background-image: url(../images/stay.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.stay::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: red;
+    opacity: .5;
+    z-index: -1;
+}
+
+.stay h2 {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.stay p {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+.stay form {}
+
+.stay input,
+.stay textarea {
+    text-transform: capitalize;
+    background: transparent;
+}
+
+.stay input:focus,
+.stay textarea:focus {
+    color: #212529;
+    background-color: transparent;
+    border-color: #15a4fa;
+    outline: 0;
+    box-shadow: none;
+}
+
+.stay input::placeholder,
+.stay textarea::placeholder {
+    color: #ffffff;
+}
+
+.stay input[type=checkbox] {
+    /* /* width: 10px;
+    height: 5px;
+    margin-bottom: 4px;
+    position: absolute;
+    left: 10%;
+    bottom: 55%; */
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #ffffff;
+}
+
+.stay input[type=checkbox] {
+    /* /* width: 10px;
+    height: 5px;
+    margin-bottom: 4px;
+    position: absolute;
+    left: 10%;
+    bottom: 55%; */
+}
+
+.stay label {
+    color: #ffffff;
+    /* width: 30%;
+    position: absolute;
+    left: 8%;
+    bottom: 55%; */
+}
+
+.form-check {}
+
+.submit {
+    background: transparent;
+    border: 1px solid #15a4fa;
+    color: #ffffff;
+    padding: 0;
+    padding: 8px 25%;
+    text-transform: capitalize;
+    /* width: 60%; */
+    margin-left: 25%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f6f9f9;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 5px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 40px;
+}
+
+footer ul li a i {
+    font-size: 30px;
+}
